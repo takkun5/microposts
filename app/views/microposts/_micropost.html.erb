@@ -3,8 +3,8 @@
   <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
   <span class="content"><%= micropost.content %></span>
   <span class="avatar">
-    <% if @micropost.avatar? %>
-     <%= avatar_tag @micropost.avatar.thumb.url  %>
+    <% if micropost.avatar.present? %>
+     <%= image_tag micropost.avatar.url  %>
     <% end %>
   </span>
   
